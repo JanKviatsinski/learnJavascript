@@ -1,16 +1,23 @@
 
 'use strict'
 
-// const arr = ['a', 'b', 'c', 'a', 'v', 'v', 'v'];
-//
+const arr = ['a', 'b', 'c', 'a', 'v', 'v', 'v'];
+//--------------------------------------------------
 // function aaa (){
+//     const ob ={}
+//
+//     for (let i = 0; i<arr.length; i++){
 //     let len;
-//     for (let object of arr){
-//         len = arr.filter()
+//     len = arr.filter(object => arr[i] === object),
+//             ob[arr[i]] = len.length;
 //     }
+//
+//     return ob
 // }
+//
+// console.log(aaa());
 
-// console.log('ddd');
+//----------------------------------
 // это решение из гугла, попробую еще по своему сделать
 // var arr = ['a', 'b', 'c', 'a', 'v', 'v', 'v'];
 //

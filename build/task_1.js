@@ -1,3 +1,6 @@
+(function (){
+
+
 const allUsers = [
     {name: 'Ivan', age: 18},
     {name: 'Petr', age: 12},
@@ -10,18 +13,17 @@ const allUsers = [
 const userName = prompt("Имя");
 
 function searchUserData (array, name) {
-    let nameFound = false;
+    let UserData;
 
     for (let user of array){
-        if (user.name.includes(name))
-            nameFound = true;
-        if (nameFound === true) nameFound = user.name + ' ' +user.age + " years";
-        if (nameFound === true) break;
+        if (user.name.includes(name)) {
+            UserData = user.name + ' ' +user.age + " years";}
     }
 
-    if (nameFound === false) return 'No results found for your request';
-    else return nameFound;
+    return (UserData === undefined) ? 'No results found for your request' : UserData;
 }
 
-
     alert(searchUserData(allUsers, userName))
+
+
+}())
