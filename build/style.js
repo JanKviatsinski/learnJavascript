@@ -29,7 +29,7 @@ function searchUserData (array, name) {
 
 // alert(searchUserData (allUsers, userName));
 
-console.log('ddssd')
+console.log('ddsd')
 
 
 
