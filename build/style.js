@@ -1,38 +1,54 @@
 
 'use strict'
 
+// var arr = ['a', 'b', 'c', 'a', 'v', 'v', 'v'];
+//
+// let result = {};
+//
+// for (let i = 0; i < arr.length; ++i) {
+//     var a = arr[i];
+//     if (result[a] === undefined)
+//         result[a] = 1;
+//
+//     else
+//         result[a] += 1;
+// }
+//
+// console.log(result);
 
-const allUsers = [
-    {name: 'Ivan', age: 18},
-    {name: 'Petr', age: 12},
-    {name: 'Igor', age: 25},
-    {name: 'Vasia', age: 13},
-    {name: 'Roma', age: 65},
-    {name: 'Foma', age: 16},
-];
+
+//------------------------------------------------------
+
+
+// const allUsers = [
+//     {name: 'Ivan', age: 18},
+//     {name: 'Petr', age: 12},
+//     {name: 'Igor', age: 25},
+//     {name: 'Vasia', age: 13},
+//     {name: 'Roma', age: 65},
+//     {name: 'Foma', age: 16},
+// ];
 
 // const userName = prompt("Имя");
+//
+// function searchUserData (array, name) {
+//     let nameFound = false;
+//
+//     for (let user of array){
+//         if (user.name.includes(name))
+//             nameFound = true;
+//         if (nameFound === true) nameFound = user.name + ' ' +user.age + " years";
+//         if (nameFound === true) break;
+//     }
+//
+//     if (nameFound === false) return 'No results found for your request';
+//     else return nameFound;
+// }
+//
+//
+//     alert(searchUserData(allUsers, userName))
 
-function searchUserData (array, name) {
-    let nameFound = false;
-
-    for (let user of array){
-        if (user.name.includes(name))
-            nameFound = true;
-        if (nameFound === true) nameFound = user.name + ' ' +user.age + " years";
-        if (nameFound === true) break;
-    }
-
-    if (nameFound === false) return 'No results found for your request';
-    else return nameFound;
-}
-
-// alert(searchUserData (allUsers, userName));
-
-console.log('ddsd')
-
-
-
+//-------------------------------------------------------------
 
 // const originalArray = [10, 2, 33, 1, 33, 4, 9, 22, 10];
 //
@@ -58,6 +74,7 @@ console.log('ddsd')
 // console.log(aaa);
 // console.log(originalArray);
 
+//---------------------------------------------------------------
 
 //
 // const originalArray = [10, 2, 33, 1, 33, 4, 9, 22, 10];
@@ -81,6 +98,7 @@ console.log('ddsd')
 //
 // //
 
+//----------------------------------------------------------------------
 
 // const allUsers = [
 //     {name: 'Ivan', age: 18},
@@ -105,7 +123,7 @@ console.log('ddsd')
 //
 // sortUsers(allUsers, adultAge);
 
-
+//------------------------------------------------------
 
 
 
