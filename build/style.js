@@ -1,15 +1,17 @@
 
 'use strict'
 
-const arr = ['a', 'b', 'c', 'a', 'v', 'v', 'v'];
+// const arr = ['a', 'b', 'c', 'a', 'v', 'v', 'v'];
+//
+// function aaa (){
+//     let len;
+//     for (let object of arr){
+//         len = arr.filter()
+//     }
+// }
 
-function aaa (){
-    let len;
-    for (let object of arr){
-        len = arr.filter()
-    }
-}
-//это решение из гугла, попробую еще по своему сделать
+// console.log('ddd');
+// это решение из гугла, попробую еще по своему сделать
 // var arr = ['a', 'b', 'c', 'a', 'v', 'v', 'v'];
 //
 // let result = {};
