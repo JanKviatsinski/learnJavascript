@@ -1,0 +1,7 @@
+.idea/
+build/
+debug.log
+desktop.ini
+
+node_modules/
+package-lock.json
