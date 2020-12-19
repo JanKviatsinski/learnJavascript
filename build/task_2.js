@@ -12,27 +12,25 @@
 
     for (let i = 0; i < arr.length; ++i) {
         let a = arr[i];
-        if (result[a] === undefined)
-            result[a] = 1;
-
-        else
-            result[a] += 1;
+        if (!result[a])
+        {result[a] = 1;}
+        else {result[a] += 1;}
     }
 
     console.log(result);
 
-    //--- второй вариант похуже, но зато сам))
+    //--- второй вариант похуже, но зато сам:)
 
     function createNewObject (array){
-        const NewObject ={}
+        const newObject ={}
 
         for (let i = 0; i<array.length; i++){
-            let length;
-            length = array.filter(object => array[i] === object),
-                NewObject[arr[i]] = length.length;
+            let forLength;
+            forLength = array.filter(object => array[i] === object),
+                newObject[arr[i]] = forLength.length;
         }
 
-        return NewObject
+        return newObject
     }
 
     console.log(createNewObject(arr));

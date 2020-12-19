@@ -10,20 +10,36 @@ const allUsers = [
     {name: 'Foma', age: 16},
 ];
 
-const userName = prompt("Имя");
+const userNameRequest = prompt("Имя");
 
-function searchUserData (array, name) {
-    let UserData;
+//--------------------------вариант 1--------------------
 
-    for (let user of array){
-        if (user.name.includes(name)) {
-            UserData = user.name + ' ' +user.age + " years";}
-    }
+function searchUserData (array, request) {
+    let userData;
 
-    return (UserData === undefined) ? 'No results found for your request' : UserData;
+    userData = array.find(user => { return user.name === request; })
+    return userData;
 }
 
-    alert(searchUserData(allUsers, userName))
+const user = searchUserData(allUsers, userNameRequest)
 
+    alert((user) ?
+        user.name + ' ' +user.age + " years" : 'No results found for your' +
+        ' request')
+
+//--------------------------вариант 2--------------------
+
+    function searchUserData_2 (array, request) {
+        let userData;
+
+        for (let user of array){
+            if (user.name === request) {
+                userData = user.name + ' ' +user.age + " years";}
+        }
+
+        return (userData) ? userData : 'No results found for your request';
+    }
+
+    console.log(searchUserData_2 (allUsers, userNameRequest));
 
 }())
