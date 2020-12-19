@@ -1,26 +1,88 @@
 
 'use strict'
 
-const arr = ['a', 'b', 'c', 'a', 'v', 'v', 'v'];
-
-const originalArray = [10, 2, 33, 1, 33, 4, 9, 22, 10];
-
-function arrayTransformation (originalData) {
-
-    const sortArray = [...originalData.sort( (a, b) => a - b)];
-
- sortArray.reduce((previous, next) => {
-     if ( previous === next ) sortArray.splice(sortArray.indexOf(next,0),1);
-  else return next;
- },0);
-
-    return sortArray;
+const products ={
+    grocery: {
+        pasta: {
+            amount: 17,
+        },
+        groats: {
+            amount: 22,
+            white: 'rice',
+        }
+    }
 }
 
-const sss = arrayTransformation(originalArray);
 
-console.log(originalArray);
-console.log(sss);
+function getProperty (obj, ...restArg){
+
+    function searchData (){
+
+        for (let i = 0; i<=restArg.length;){
+            let newObj = {...obj};
+
+            if (newObj[restArg[i]]){
+                console.log(newObj[restArg[i]])
+                newObj = {...newObj[restArg[i]]}
+                i++
+            } else {
+                console.log(newObj[restArg[i]])}
+            i++
+        }
+    }
+
+    searchData();
+
+}
+
+getProperty(products, 'grocery','groats', 'white')
+
+// console.log(Object.keys(products))
+// console.log(getProperty(products, 'grocery','groats', 'white'))
+
+
+
+// / 1 - нужно реализовать функции получения значения из объекта. Входные параметры функции ( объект, строка пути )
+// const obj = {
+//     a: {
+//         b: {
+//             c: 'd'
+//         },
+//         e: 'f'
+//     }
+// };
+// примеры:
+//     getProperty( obj, 'a.b.c' ) -> 'd'
+// getProperty( obj, 'a.b' ) -> { c : 'd' }
+// getProperty( obj, 'a.x.e' ) -> undefined
+
+
+
+
+
+
+
+
+
+//
+// const originalArray = [10, 2, 33, 1, 33, 4, 9, 22, 10];
+//
+// function arrayTransformation (originalData) {
+//
+//     const sortArray = [...originalData.sort( (a, b) => a - b)];
+//
+//  sortArray.reduce((previous, next) => {
+//      if ( previous === next ) sortArray.splice(sortArray.indexOf(next,0),1);
+//   else return next;
+//  },0);
+//
+//     return sortArray;
+// }
+//
+// const sss = arrayTransformation(originalArray);
+//
+// console.log(originalArray);
+// console.log(sss);
 
 
 
@@ -145,6 +207,9 @@ console.log(sss);
 //     getProperty( obj, 'a.b.c' ) -> 'd'
 // getProperty( obj, 'a.b' ) -> { c : 'd' }
 // getProperty( obj, 'a.x.e' ) -> undefined
+
+
+
 //
 // SpiritMoon, [17.12.20 15:15]
 // 2 - есть массив чисел, нужно реализовать функцию, которая в этом массиве находит 2 максимальных числа ( за один проход по массиву )
