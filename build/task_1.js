@@ -1,6 +1,4 @@
 (function (){
-
-
 const allUsers = [
     {name: 'Ivan', age: 18},
     {name: 'Petr', age: 12},
@@ -36,7 +34,6 @@ const user = searchUserData(allUsers, userNameRequest)
             if (user.name === request) {
                 userData = user.name + ' ' +user.age + " years";}
         }
-
         return (userData) ? userData : 'No results found for your request';
     }
 

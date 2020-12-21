@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4270ca76-55fc-4f4a-a35a-67d9ebb96cd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/task_3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/task_4.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/task_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/task_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/task_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/task_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/task_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/task_3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +58,8 @@
       <updated>1608291630917</updated>
       <workItem from="1608291634198" duration="4736000" />
       <workItem from="1608296446371" duration="21793000" />
-      <workItem from="1608356358332" duration="35945000" />
+      <workItem from="1608356358332" duration="41174000" />
+      <workItem from="1608526203063" duration="36096000" />
     </task>
     <task id="LOCAL-00001" summary="ddda">
       <created>1608296735719</created>
@@ -134,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608362641839</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="task1 task2 task3 task219.12.20">
+      <created>1608397576111</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1608397576111</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,13 +156,14 @@
     <MESSAGE value="{ a: 2, b: 1, c: 1, v: 3}" />
     <MESSAGE value="task1 task2" />
     <MESSAGE value="task1 task2 19.12.20" />
-    <option name="LAST_COMMIT_MESSAGE" value="task1 task2 19.12.20" />
+    <MESSAGE value="task1 task2 task3 task219.12.20" />
+    <option name="LAST_COMMIT_MESSAGE" value="task1 task2 task3 task219.12.20" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1608362641034">
+    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1608397575281">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608362641034" />
+    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608397575281" />
     <state x="453" y="155" key="FileChooserDialogImpl" timestamp="1608295473211">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
@@ -160,17 +172,21 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="462" y="102" key="RollbackChangesDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608319522451" />
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1608362649449">
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1608397655769">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608362649449" />
-    <state x="329" y="181" key="run.anything.popup" timestamp="1608294083302">
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608397655769" />
+    <state x="515" y="172" key="refactoring.ChangeSignatureDialog" timestamp="1608545145187">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="329" y="181" key="run.anything.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608294083302" />
-    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1608308024040">
+    <state x="515" y="172" key="refactoring.ChangeSignatureDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608545145187" />
+    <state x="329" y="181" width="672" height="677" key="run.anything.popup" timestamp="1608537284957">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608308024040" />
+    <state x="329" y="181" width="672" height="677" key="run.anything.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608537284957" />
+    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1608542779965">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608542779965" />
   </component>
 </project>
