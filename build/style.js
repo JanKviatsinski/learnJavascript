@@ -1,41 +1,69 @@
 
 'use strict'
 
-const products ={
-    grocery: {
-        pasta: {
-            amount: 17,
-        },
-        groats: {
-            amount: 22,
-            white: 'rice',
-        }
+const data = [
+    ['A', 'mon', '10',]
+    ['A', 'mon', '10'],
+    ['B', 'wed', '14'],
+    ['C', 'mon', '13'],
+    ['B', 'sut', '14'],
+    ['D', 'mon', '11'],
+    ['A', 'twu', '9'],
+    ['C', 'mon', '10'],
+    ['C', 'fri', '20'],
+    ['D', 'mon', '32'],
+    ['A', 'wed', '5']
+];
+
+function ff (array){
+    let newArray;
+    for (let ttt of array){
+    newArray = ttt.reduce((result, item, index) => {
+       result[index] = item ;
+       return result
+    },{})
+    }
+    return newArray
+}
+
+console.log(ff(data))
+
+let fcf ={
+    mon: {
+        A: [ '10', '10' ],
+        C: [ '13', '10' ],
+        D: [ '11', '32' ]
+    },
+    wed: {
+        B: [ '14' ],
+        A: [ '5' ],
+    },
+    sut: {
+        B: [ '14' ]
+    },
+    twu: {
+        A: [ '9' ]
+    },
+    fri: {
+        C: [ '20' ]
     }
 }
 
+// let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+// let petya = { name: "Петя", surname: "Иванов", id: 2 };
+// let masha = { name: "Маша", surname: "Петрова", id: 3 };
+//
+// let users = [ vasya, petya, masha ];
+//
+// let usersMapped = users.map(user => ({
+//     fullName: `${user.name} ${user.surname}`,
+//     id: user.id
+// }));
+// let usersMapped = users.map(user => ({
+//     fullName: `${user.name} ${user.surname}`,
+//     id: user.id
+// }));
 
-function getProperty (obj, ...restArg){
-
-    function searchData (){
-
-        for (let i = 0; i<=restArg.length;){
-            let newObj = {...obj};
-
-            if (newObj[restArg[i]]){
-                console.log(newObj[restArg[i]])
-                newObj = {...newObj[restArg[i]]}
-                i++
-            } else {
-                console.log(newObj[restArg[i]])}
-            i++
-        }
-    }
-
-    searchData();
-
-}
-
-getProperty(products, 'grocery','groats', 'white')
 
 // console.log(Object.keys(products))
 // console.log(getProperty(products, 'grocery','groats', 'white'))
@@ -237,12 +265,25 @@ getProperty(products, 'grocery','groats', 'white')
 // ];
 // Первый элемент в массиве - название класса, второй - это день недели и третий время дня
 // Нужно реализовать функцию, которая возвращает объект, в котором сгруппированы дни недели, по дням недели сгрупированы классы и время в них
-// {
-//     mon: { A: [ '10', '10' ], C: [ '13', '10' ], 😧 [ '11', '32' ] },
-//     wed: { B: [ '14' ], A: [ '5' ] },
-//     sut: { B: [ '14' ] },
-//     twu: { A: [ '9' ] },
-//     fri: { C: [ '20' ] }
+// let ff ={
+//     mon: {
+//         A: [ '10', '10' ],
+//         C: [ '13', '10' ],
+//         D: [ '11', '32' ]
+//     },
+//     wed: {
+//         B: [ '14' ],
+//         A: [ '5' ],
+//     },
+//     sut: {
+//             B: [ '14' ]
+//         },
+//     twu: {
+//         A: [ '9' ]
+//     },
+//     fri: {
+//         C: [ '20' ]
+//     }
 // }
 
 

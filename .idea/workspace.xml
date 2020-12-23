@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4270ca76-55fc-4f4a-a35a-67d9ebb96cd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/task_5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/task_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/task_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +60,8 @@
       <workItem from="1608296446371" duration="21793000" />
       <workItem from="1608356358332" duration="41174000" />
       <workItem from="1608526203063" duration="38058000" />
-      <workItem from="1608615274525" duration="2661000" />
+      <workItem from="1608615274525" duration="26404000" />
+      <workItem from="1608726394697" duration="8939000" />
     </task>
     <task id="LOCAL-00001" summary="ddda">
       <created>1608296735719</created>
@@ -149,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608575548225</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="task2 task3 21.12.20">
+      <created>1608618190400</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1608618190400</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,10 +177,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="task2 task3 21.12.20" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1608575547107">
+    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1608618189155">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608575547107" />
+    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608618189155" />
     <state x="453" y="155" key="FileChooserDialogImpl" timestamp="1608295473211">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
@@ -177,10 +189,14 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="462" y="102" key="RollbackChangesDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608319522451" />
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1608575552621">
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1608618211847">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608575552621" />
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608618211847" />
+    <state x="93" y="93" width="1158" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1608651041604">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state x="93" y="93" width="1158" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608651041604" />
     <state x="515" y="172" key="refactoring.ChangeSignatureDialog" timestamp="1608545145187">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
@@ -189,9 +205,9 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="329" y="181" width="672" height="677" key="run.anything.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608537284957" />
-    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1608542779965">
+    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1608661656003">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608542779965" />
+    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608661656003" />
   </component>
 </project>
