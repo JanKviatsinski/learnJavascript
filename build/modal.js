@@ -8,7 +8,7 @@ let buttonShowModal = document.createElement('button');
 
 document.body.prepend(buttonShowModal);
 
-divModal.classList.add('yes');
+divModal.classList.add('modal');
 
 buttonShowModal.textContent = 'Показать модальное окно';
 
