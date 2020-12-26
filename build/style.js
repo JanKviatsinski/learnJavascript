@@ -2,7 +2,7 @@
 'use strict'
 
 const data = [
-    ['A', 'mon', '10',]
+    ['A', 'mon', '10'],
     ['A', 'mon', '10'],
     ['B', 'wed', '14'],
     ['C', 'mon', '13'],
@@ -12,22 +12,62 @@ const data = [
     ['C', 'mon', '10'],
     ['C', 'fri', '20'],
     ['D', 'mon', '32'],
-    ['A', 'wed', '5']
+    ['A', 'wed', '5'],
 ];
 
-function ff (array){
-    let newArray;
-    for (let ttt of array){
-    newArray = ttt.reduce((result, item, index) => {
-       result[index] = item ;
-       return result
-    },{})
+let newArray = data.reduce((previousValue, item) =>{
+    if (!previousValue[item[1]]){
+        previousValue[item[1]] = item.reduce((previousValue1, item1) =>{
+            if (!previousValue1[item1]){
+                previousValue1[item1] = [item1];
+                return previousValue1;
+            } else {
+                previousValue1.push(item1[2]);
+                return previousValue1;
+            }
+        },{})
+        return previousValue
+    } else {
+        previousValue[item[1]].push(item.reduce((previousValue1, item1) =>{
+            if (!previousValue1[item1]){
+                previousValue1[item1] = [item1];
+                return previousValue1;
+            } else {
+                previousValue1.push(item1[2]);
+                return previousValue1;
+            }
+        },{}));
+        return previousValue
     }
-    return newArray
-}
+},{})
 
-console.log(ff(data))
+console.log(newArray)
 
+// let newArray = data.reduce((previousValue, item) =>{
+//         if (!previousValue[item[1]]){
+//             previousValue[item[1]] = item.reduce((previousValue1, item1) =>{
+//                if (!previousValue1[item1]){
+//                    previousValue1[item1] = [item1];
+//                    return previousValue1;
+//                } else {
+//                    previousValue1.push(item1[2]);
+//                    return previousValue1;
+//                }
+//             },{})
+//             return previousValue
+//         } else {
+//             /*previousValue[item[1]].push(item.reduce((previousValue3, item1) =>{
+//                 if (!previousValue3[item1[0]]){
+//                     previousValue3[item1[0]] = [item1[2]];
+//                     return previousValue3[item1[0]];
+//                 } else {
+//                     previousValue3[item1[0]].push(item1[2]);
+//                     return previousValue3[item1[0]];
+//                 }
+//             },{}))*/;
+//             return previousValue
+//         }
+// },{})
 let fcf ={
     mon: {
         A: [ '10', '10' ],
