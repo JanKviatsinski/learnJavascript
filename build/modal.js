@@ -8,7 +8,7 @@ let buttonShowModal = document.createElement('button');
 
 document.body.prepend(buttonShowModal);
 
-divModal.classList.add('yes')
+divModal.classList.add('yes');
 
 buttonShowModal.textContent = 'Показать модальное окно';
 
@@ -18,26 +18,47 @@ divModal.prepend(buttonHiddenModal);
 
 buttonHiddenModal.textContent = 'Срыть модальное окно';
 
-// divModal.hidden = true;
+divModal.hidden = true;
 
 function showModal (){
     divModal.hidden = false;
 }
 
-buttonShowModal.addEventListener("click", showModal)
+buttonShowModal.addEventListener("click", showModal);
+
+buttonShowModal.addEventListener("click", startClock);
 
 function hiddenModal (){
     divModal.hidden = true;
 }
 
-buttonHiddenModal.addEventListener("click", hiddenModal)
+buttonHiddenModal.addEventListener("click", hiddenModal);
 
-let date = new Date();
-let hours = date.getHours();
-let minute = date.getMinutes();
-let seconds = date.getSeconds()
+buttonHiddenModal.addEventListener("click", stopClock);
 
-console.log(`${hours} : ${minute} : ${seconds}`)
+let clock= document.createElement('div');
+
+divModal.prepend(clock);
+
+function updateClock (){
+    let date = new Date();
+
+    clock.textContent = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
+}
+
+let timerId;
+
+function startClock (){
+    timerId = setInterval(updateClock, 1000);
+
+    updateClock ();
+}
+
+function stopClock (){
+    clearInterval(timerId)
+}
+
+
 
 
 

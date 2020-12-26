@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4270ca76-55fc-4f4a-a35a-67d9ebb96cd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,9 @@
       <workItem from="1608615274525" duration="26404000" />
       <workItem from="1608726394697" duration="10331000" />
       <workItem from="1608814349524" duration="5102000" />
-      <workItem from="1608819522201" duration="2371000" />
+      <workItem from="1608819522201" duration="3221000" />
+      <workItem from="1608830610848" duration="3204000" />
+      <workItem from="1608961325760" duration="5241000" />
     </task>
     <task id="LOCAL-00001" summary="ddda">
       <created>1608296735719</created>
@@ -166,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608736492074</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="okno">
+      <created>1608822163167</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608822163167</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,13 +189,14 @@
     <MESSAGE value="task1 task2 task3 task219.12.20" />
     <MESSAGE value="task2 task3 21.12.20" />
     <MESSAGE value="task5 21.12.20" />
-    <option name="LAST_COMMIT_MESSAGE" value="task5 21.12.20" />
+    <MESSAGE value="okno" />
+    <option name="LAST_COMMIT_MESSAGE" value="okno" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1608736490691">
+    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1608822161913">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608736490691" />
+    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608822161913" />
     <state x="453" y="155" key="FileChooserDialogImpl" timestamp="1608748313659">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
