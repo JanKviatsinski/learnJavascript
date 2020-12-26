@@ -12,7 +12,7 @@
         else {result[a] += 1;}
     }
 
-    console.log(result);
+    // console.log(result);
 
     //--- второй вариант похуже, но зато сам:)
 
@@ -28,6 +28,20 @@
         return newObject
     }
 
-    console.log(createNewObject(arr));
+    // console.log(createNewObject(arr));
+
+    console.log(arr);
+
+    let result2 = arr.reduce((previousValue, item, index ) => {
+        if (!previousValue[index]){
+            previousValue[item] = 1;
+            return previousValue;
+        } else {
+            previousValue[item] += 1;
+            return previousValue;
+        }
+    }, {})
+
+    console.log(result2)
 
 }())
