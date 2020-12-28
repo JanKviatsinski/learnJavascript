@@ -41,5 +41,5 @@ let newArray = data.reduce((previousValue, item) =>{
 },{})
 
 console.log(newArray)
-
+    
 }())
