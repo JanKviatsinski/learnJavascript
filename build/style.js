@@ -17,57 +17,40 @@ const data = [
 
 let newArray = data.reduce((previousValue, item) =>{
     if (!previousValue[item[1]]){
-        previousValue[item[1]] = item.reduce((previousValue1, item1) =>{
-            if (!previousValue1[item1]){
-                previousValue1[item1] = [item1];
-                return previousValue1;
-            } else {
-                previousValue1.push(item1[2]);
-                return previousValue1;
-            }
-        },{})
+        previousValue[item[1]]= {};
+        if(!previousValue[item[1]][item[0]]){
+           previousValue[item[1]][item[0]] = [ item[2],];
+        } else { previousValue[item[1]][item[0]].push(item[2]);}
         return previousValue
-    } else {
-        previousValue[item[1]].push(item.reduce((previousValue1, item1) =>{
-            if (!previousValue1[item1]){
-                previousValue1[item1] = [item1];
-                return previousValue1;
-            } else {
-                previousValue1.push(item1[2]);
-                return previousValue1;
-            }
-        },{}));
+    } else if (!previousValue[item[1]][item[0]]){
+            previousValue[item[1]][item[0]] = [ item[2],];
+        } else { previousValue[item[1]][item[0]].push(item[2]);}
         return previousValue
-    }
+
+
 },{})
 
 console.log(newArray)
 
-// let newArray = data.reduce((previousValue, item) =>{
-//         if (!previousValue[item[1]]){
-//             previousValue[item[1]] = item.reduce((previousValue1, item1) =>{
-//                if (!previousValue1[item1]){
-//                    previousValue1[item1] = [item1];
-//                    return previousValue1;
-//                } else {
-//                    previousValue1.push(item1[2]);
-//                    return previousValue1;
-//                }
-//             },{})
-//             return previousValue
-//         } else {
-//             /*previousValue[item[1]].push(item.reduce((previousValue3, item1) =>{
-//                 if (!previousValue3[item1[0]]){
-//                     previousValue3[item1[0]] = [item1[2]];
-//                     return previousValue3[item1[0]];
-//                 } else {
-//                     previousValue3[item1[0]].push(item1[2]);
-//                     return previousValue3[item1[0]];
-//                 }
-//             },{}))*/;
-//             return previousValue
+
+// let newArraya = data.reduce((previousValue, item) =>{
+//     switch (previousValue[item[1]]){
+//         case true: switch (previousValue[item[1]][item[0]]){
+//             case true: previousValue[item[1]][item[0]].push(item[2]);
+//             case false: previousValue[item[1]][item[0]] = [ item[2],];
 //         }
+//         case false: {
+//             previousValue[item[1]] = {};
+//             switch (previousValue[item[1]][item[0]]){
+//                 case true: previousValue[item[1]][item[0]].push(item[2]);
+//                 case false:previousValue[item[1]][item[0]] = [ item[2],];
+//             }
+//         };
+//     }
+//
 // },{})
+//
+// console.log(newArraya)
 let fcf ={
     mon: {
         A: [ '10', '10' ],
