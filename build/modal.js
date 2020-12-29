@@ -1,10 +1,10 @@
 'use strict'
 
-let divModal = document.createElement('div');
+const divModal = document.createElement('div');
 
 document.body.prepend(divModal);
 
-let buttonShowModal = document.createElement('button');
+const buttonShowModal = document.createElement('button');
 
 document.body.prepend(buttonShowModal);
 
@@ -12,7 +12,7 @@ divModal.classList.add('modal');
 
 buttonShowModal.textContent = 'Показать модальное окно';
 
-let buttonHiddenModal = document.createElement('button');
+const buttonHiddenModal = document.createElement('button');
 
 divModal.prepend(buttonHiddenModal);
 
@@ -36,12 +36,12 @@ buttonHiddenModal.addEventListener("click", hiddenModal);
 
 buttonHiddenModal.addEventListener("click", stopClock);
 
-let clock= document.createElement('div');
+const clock= document.createElement('div');
 
 divModal.prepend(clock);
 
 function updateClock (){
-    let date = new Date();
+    const date = new Date();
 
     clock.textContent = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
 }

@@ -14,7 +14,7 @@
         ['A', 'wed', '5'],
     ];
 
-    let newObj = data.reduce((previousValue, item) =>{
+    const newObj = data.reduce((previousValue, item) =>{
         if (!previousValue[item[1]]){
             previousValue[item[1]]= {};
             if(!previousValue[item[1]][item[0]]){
@@ -25,7 +25,6 @@
             previousValue[item[1]][item[0]] = [ item[2],];
         } else { previousValue[item[1]][item[0]].push(item[2]);}
         return previousValue
-
     },{})
 
     console.log(newObj);

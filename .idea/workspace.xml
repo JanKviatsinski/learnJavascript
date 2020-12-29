@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4270ca76-55fc-4f4a-a35a-67d9ebb96cd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/task_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/task_3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/task_6.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/task_6.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +66,8 @@
       <workItem from="1608819522201" duration="3221000" />
       <workItem from="1608830610848" duration="3204000" />
       <workItem from="1608961325760" duration="28752000" />
-      <workItem from="1609134008700" duration="16474000" />
+      <workItem from="1609134008700" duration="21200000" />
+      <workItem from="1609221520180" duration="1182000" />
     </task>
     <task id="LOCAL-00001" summary="ddda">
       <created>1608296735719</created>
@@ -212,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609156557708</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="3 + modal + 6">
+      <created>1609164762000</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1609164762000</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,13 +242,14 @@
     <MESSAGE value="task 2 2" />
     <MESSAGE value="task 6" />
     <MESSAGE value="task 3 + modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 3 + modal" />
+    <MESSAGE value="3 + modal + 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 + modal + 6" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1609156555874">
+    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1609164761034">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609156555874" />
+    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609164761034" />
     <state x="453" y="155" key="FileChooserDialogImpl" timestamp="1608748313659">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
@@ -246,10 +258,10 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="462" y="102" key="RollbackChangesDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608319522451" />
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1609156565451">
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1609164764381">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609156565451" />
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609164764381" />
     <state x="93" y="93" width="1158" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1608651041604">
       <screen x="0" y="0" width="1344" height="800" />
     </state>

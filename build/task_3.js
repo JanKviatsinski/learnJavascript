@@ -16,7 +16,7 @@
     function getProperty (obj, str){
         let newObj = obj;
 
-        let direction = str.split('.');
+        const direction = str.split('.');
 
         for (let i = 0; i < direction.length; i++){
             if (newObj[direction[i]] === undefined){
