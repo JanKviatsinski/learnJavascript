@@ -24,17 +24,9 @@ function showModal (){
     divModal.hidden = false;
 }
 
-buttonShowModal.addEventListener("click", showModal);
-
-buttonShowModal.addEventListener("click", startClock);
-
 function hiddenModal (){
     divModal.hidden = true;
 }
-
-buttonHiddenModal.addEventListener("click", hiddenModal);
-
-buttonHiddenModal.addEventListener("click", stopClock);
 
 const clock= document.createElement('div');
 
@@ -48,15 +40,47 @@ function updateClock (){
 
 let timerId;
 
+let clockStatus;
+
 function startClock (){
     timerId = setInterval(updateClock, 1000);
+
+    clockStatus = true;
 
     updateClock ();
 }
 
 function stopClock (){
-    clearInterval(timerId)
+    clearInterval(timerId);
+
+    clockStatus = false;
 }
+
+const buttonStopStartClock = document.createElement('button');
+
+divModal.append(buttonStopStartClock);
+
+buttonStopStartClock.textContent = 'stop/start clock';
+
+function stopStartClock (){
+    clockStatus ? stopClock() : startClock();
+}
+
+const body = document.querySelector('body');
+
+body.onclick = function(event){
+    switch (event.target){
+        case buttonShowModal:
+           return showModal(), startClock();
+
+        case buttonHiddenModal:
+            return hiddenModal(), stopClock();
+
+        case buttonStopStartClock:
+            return stopStartClock();
+    }
+}
+
 
 
 

@@ -1,78 +1,26 @@
 
 'use strict'
 
-// let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
-// let petya = { name: "Петя", surname: "Иванов", id: 2 };
-// let masha = { name: "Маша", surname: "Петрова", id: 3 };
-//
-// let users = [ vasya, petya, masha ];
-//
-// let usersMapped = users.map(user => ({
-//     fullName: `${user.name} ${user.surname}`,
-//     id: user.id
-// }));
-// let usersMapped = users.map(user => ({
-//     fullName: `${user.name} ${user.surname}`,
-//     id: user.id
-// }));
+// поместить все текстовые узлы в элемент <span>
+// он занимает только то место, которое необходимо для текста
+for (let li of tree.querySelectorAll('li')) {
+    let span = document.createElement('span');
+    li.prepend(span);
+    span.append(span.nextSibling); // поместить текстовый узел внутрь элемента <span>
+}
 
+//  ловим клики на всём дереве
+tree.onclick = function(event) {
 
-// console.log(Object.keys(products))
-// console.log(getProperty(products, 'grocery','groats', 'white'))
+    if (event.target.tagName !== 'SPAN') {
+        return;
+    }
 
+    let childrenContainer = event.target.parentNode.querySelector('ul');
+    if (!childrenContainer) return; // нет детей
 
-
-// / 1 - нужно реализовать функции получения значения из объекта. Входные параметры функции ( объект, строка пути )
-// const obj = {
-//     a: {
-//         b: {
-//             c: 'd'
-//         },
-//         e: 'f'
-//     }
-// };
-// примеры:
-//     getProperty( obj, 'a.b.c' ) -> 'd'
-// getProperty( obj, 'a.b' ) -> { c : 'd' }
-// getProperty( obj, 'a.x.e' ) -> undefined
-
-
-
-
-
-
-
-
-
-//
-// const originalArray = [10, 2, 33, 1, 33, 4, 9, 22, 10];
-//
-// function arrayTransformation (originalData) {
-//
-//     const sortArray = [...originalData.sort( (a, b) => a - b)];
-//
-//  sortArray.reduce((previous, next) => {
-//      if ( previous === next ) sortArray.splice(sortArray.indexOf(next,0),1);
-//   else return next;
-//  },0);
-//
-//     return sortArray;
-// }
-//
-// const sss = arrayTransformation(originalArray);
-//
-// console.log(originalArray);
-// console.log(sss);
-
-
-
-
-
-
-
-
-
-
+    childrenContainer.hidden = !childrenContainer.hidden;
+}
 //-------------------------------------------------------------
 
 // const originalArray = [10, 2, 33, 1, 33, 4, 9, 22, 10];

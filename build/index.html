@@ -27,19 +27,80 @@
     /*align-items: center;*/
     width: 200px;
     height: 200px;
-    background: #7c6262;
+    background: #be9191;
     text-align: center;
   }
+
+/*  -----------------------------------------*/
+
+  .tree span:hover {
+      font-weight: bold;
+  }
+
+  .tree span {
+      cursor: pointer;
+  }
 </style>
+
+<form name="form" novalidate>
+  <label for="name">name:</label>
+  <input type="text" id="name">
+
+  <label for="age">age:</label>
+  <input type="" id="age">
+
+  <div>
+    <button type="submit">submit</button>
+    <button type="reset">reset</button>
+  </div>
+</form>
+
+<ul class="tree" id="tree">
+    <li>Животные
+        <ul>
+            <li>Млекопитающие
+                <ul>
+                    <li>Коровы</li>
+                    <li>Ослы</li>
+                    <li>Собаки</li>
+                    <li>Тигры</li>
+                </ul>
+            </li>
+            <li>Другие
+                <ul>
+                    <li>Змеи</li>
+                    <li>Птицы</li>
+                    <li>Ящерицы</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Рыбы
+        <ul>
+            <li>Аквариумные
+                <ul>
+                    <li>Гуппи</li>
+                    <li>Скалярии</li>
+                </ul>
+            </li>
+            <li>Морские
+                <ul>
+                    <li>Морская форель</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
 
 <!--<script src="style.js"></script>-->
 <!--<script src="task_1.js"></script>-->
 <!--<script src="task_2.js"></script>-->
-<script src="task_3.js"></script>
+<!--<script src="task_3.js"></script>-->
 <!--<script src="task_4.js"></script>-->
 <!--<script src="task_5.js"></script>-->
 <script src="modal.js"></script>
-<script src="task_6.js"></script>
+<!--<script src="task_6.js"></script>-->
 <!--<script src="form.js"></script>-->
 
 
