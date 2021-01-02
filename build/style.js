@@ -1,26 +1,140 @@
 
 'use strict'
+const form = document.forms.form;
+const name = form.name;
+const age = form.age;
 
-// поместить все текстовые узлы в элемент <span>
-// он занимает только то место, которое необходимо для текста
-for (let li of tree.querySelectorAll('li')) {
-    let span = document.createElement('span');
-    li.prepend(span);
-    span.append(span.nextSibling); // поместить текстовый узел внутрь элемента <span>
-}
+function formValidation(){
 
-//  ловим клики на всём дереве
-tree.onclick = function(event) {
+    return validateAge () && validateName ();
 
-    if (event.target.tagName !== 'SPAN') {
-        return;
+    function validateName (){
+        let userNameLength = name.value.length;
+
+    if (userNameLength >= 3 && userNameLength <= 30) {
+        return alert(555)
+    } else {
+        createMessage(name, false);
+        return false;
+    }
     }
 
-    let childrenContainer = event.target.parentNode.querySelector('ul');
-    if (!childrenContainer) return; // нет детей
+function validateAge (){
+    let userAge= age.value;
 
-    childrenContainer.hidden = !childrenContainer.hidden;
+    if(userAge >= 18 && userAge <= 99){
+        return true;
+    } else {
+        createMessage(age, false);
+        return false;
+    }
 }
+}
+
+
+function createTable ()  {
+    let table = document.createElement('table');
+    let tr = table.insertRow();
+    let td = tr.insertCell();
+    td.textContent = 'cccc';
+    tr.textContent = 'gggg';
+
+    // let td = document.createElement('td');
+    // let tr = document.createElement('tr');
+    // tr.appendChild(td);
+
+    // table.appendChild(td);
+    // table.appendChild(tr);
+    // document.body.appendChild(table);
+    table.style.backgroundColor = '#60a75b';
+    td.style.borderColor = '#060706'
+    tr.style.borderColor = '#060706'
+    td.style.border = 2 + 'px';
+    tr.style.border = 2 + 'px';
+    tr.style.width = 50 + 'px';
+    td.style.width = 50 + 'px';
+    tr.style.height = 50 + 'px';
+    td.style.height = 50 + 'px';
+    table.style.height = 100 + 'px';
+    table.style.width = 100 + 'px';
+    // td.textContent = 'cccc';
+    // tr.textContent = 'gggg';
+    document.body.append(table);
+}
+
+createTable ()
+
+age.addEventListener('keypress', function (event){
+    let age = Number.isNaN(Number(event.target.value));
+    if (age){
+        event.preventDefault()
+    }
+})
+
+function createMessage (input){
+    let parent = input.parentNode;
+    let messageWrap = document.createElement('div');
+    let message = document.createElement('p');
+    let label = parent.querySelector('label');
+    parent.prepend(messageWrap);
+    messageWrap.append(label);
+    messageWrap.append(message);
+    messageWrap.append(input);
+    messageWrap.append(input);
+    message.textContent = `поле ${input.id} неверно`;
+    messageWrap.style.position = 'relative';
+    message.style.position = 'absolute';
+    let left = label.offsetWidth;
+    message.style.left= left + 'px';
+    message.style.backgroundColor = '#60a75b';
+    message.style.margin = '0';
+    input.onfocus = () => message.hidden = true;
+}
+
+    // (messageWrap.offsetWidth / 2) - (message.offsetWidth/2) - label.offsetWidth
+// let ages = Number("s");
+//
+// alert(  ages);
+
+
+
+
+
+
+
+//
+// console.log(name)
+// console.log(age)
+
+
+
+// let ff = document.forms.form.name;
+// select.options[0].selected = true;
+//
+// let option = new Option("Текст", "value", false, true );
+// select.prepend(option)
+// console.log(select.textContent)
+//--------------------------------------------------------
+//третья задача первое решение
+// function getProperty (obj, str){
+//     let newObj = obj;
+//
+//     const direction = str.split('.');
+//
+//     for (let i = 0; i < direction.length; i++){
+//         if (newObj[direction[i]] === undefined){
+//             newObj = undefined;
+//             break;
+//         }
+//          else if (newObj[direction[i]]){
+//             newObj = newObj[direction[i]];
+//         } else {
+//             newObj = undefined;
+//         }
+//     }
+//
+//     return newObj
+// }
 //-------------------------------------------------------------
 
 // const originalArray = [10, 2, 33, 1, 33, 4, 9, 22, 10];

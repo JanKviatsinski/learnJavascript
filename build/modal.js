@@ -1,83 +1,65 @@
 'use strict'
-
 const divModal = document.createElement('div');
-
-document.body.prepend(divModal);
-
-const buttonShowModal = document.createElement('button');
-
-document.body.prepend(buttonShowModal);
-
 divModal.classList.add('modal');
-
-buttonShowModal.textContent = 'Показать модальное окно';
-
-const buttonHiddenModal = document.createElement('button');
-
-divModal.prepend(buttonHiddenModal);
-
-buttonHiddenModal.textContent = 'Срыть модальное окно';
-
 divModal.hidden = true;
 
-function showModal (){
-    divModal.hidden = false;
-}
+const buttonShowModal = document.createElement('button');
+buttonShowModal.textContent = 'Показать модальное окно';
+buttonShowModal.addEventListener('click', toggleHidden);
+buttonShowModal.addEventListener('click', stopStartClock);
 
-function hiddenModal (){
-    divModal.hidden = true;
-}
+const fragment = document.createDocumentFragment();
+fragment.prepend(buttonShowModal);
+fragment.append(divModal);
+document.body.prepend(fragment);
 
-const clock= document.createElement('div');
+const buttonHiddenModal = document.createElement('button');
+buttonHiddenModal.textContent = 'Срыть модальное окно';
+divModal.prepend(buttonHiddenModal);
 
+const clock = document.createElement('div');
 divModal.prepend(clock);
 
-function updateClock (){
+const buttonStopStartClock = document.createElement('button');
+buttonStopStartClock.textContent = 'stop/start clock';
+divModal.append(buttonStopStartClock);
+
+let timerId;
+let isClockRunning;
+
+function toggleHidden() {
+    divModal.hidden = !divModal.hidden;
+}
+
+function updateClock() {
     const date = new Date();
 
     clock.textContent = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
 }
 
-let timerId;
-
-let clockStatus;
-
-function startClock (){
-    timerId = setInterval(updateClock, 1000);
-
-    clockStatus = true;
-
-    updateClock ();
-}
-
-function stopClock (){
-    clearInterval(timerId);
-
-    clockStatus = false;
-}
-
-const buttonStopStartClock = document.createElement('button');
-
-divModal.append(buttonStopStartClock);
-
-buttonStopStartClock.textContent = 'stop/start clock';
-
 function stopStartClock (){
-    clockStatus ? stopClock() : startClock();
+    // три кнопки упраляют одной функцией. в таком кейсе между собой конфликтуют.
+    //
+    if (!isClockRunning){
+        timerId = setInterval(updateClock, 1000);
+        updateClock();
+    } else {
+            clearInterval(timerId);
+    }
+
+    isClockRunning = !isClockRunning;
 }
 
-const body = document.querySelector('body');
-
-body.onclick = function(event){
-    switch (event.target){
-        case buttonShowModal:
-           return showModal(), startClock();
-
+divModal.onclick = function (event) {
+    switch (event.target) {
         case buttonHiddenModal:
-            return hiddenModal(), stopClock();
-
+            // последовательно вызывай функции и выходи из switch
+            stopStartClock();
+            toggleHidden();
+            break;
         case buttonStopStartClock:
-            return stopStartClock();
+            stopStartClock();
+            break;
     }
 }
 

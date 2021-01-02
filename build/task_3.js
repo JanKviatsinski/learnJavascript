@@ -1,4 +1,3 @@
-
 (function (){
 
     const products ={
@@ -19,21 +18,16 @@
         const direction = str.split('.');
 
         for (let i = 0; i < direction.length; i++){
-            if (newObj[direction[i]] === undefined){
-                newObj = undefined;
-                break;
-            }
-             else if (newObj[direction[i]]){
-                newObj = newObj[direction[i]];
-            } else {
-                newObj = undefined;
-            }
+            newObj = (newObj[direction[i]] === undefined) ? undefined : newObj[direction[i]];
         }
 
-        return newObj
+        return newObj;
     }
 
-
-console.log(getProperty(products,'grocery.groats.white'))
-
+console.log(getProperty(products,'grocery.groats.white'));
 }())
+
+
+
+
+

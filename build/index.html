@@ -14,6 +14,7 @@
 <body>
 <style type="text/css">
   body {
+      height: 2000px;
    background: #725b5b;
     display: flex;
     flex-direction: column;
@@ -30,24 +31,37 @@
     background: #be9191;
     text-align: center;
   }
+  /*.a {*/
+  /*  position: relative;*/
+  /*  !*width: 200px;*!*/
+  /*  !*height: 200px;*!*/
+  /*  background: #1a1414;*/
+  /*}*/
 
-/*  -----------------------------------------*/
-
-  .tree span:hover {
-      font-weight: bold;
-  }
-
-  .tree span {
-      cursor: pointer;
-  }
+  /*.b {*/
+  /*  position: absolute;*/
+  /*  top: -100px;*/
+  /*  width: 100px;*/
+  /*  height: 100px;*/
+  /*  background: #60a75b;*/
+  /*}*/
 </style>
 
-<form name="form" novalidate>
-  <label for="name">name:</label>
-  <input type="text" id="name">
+<form name="form" onSubmit="return formValidation();">
+  <fieldset>
+    <legend>Name</legend>
+    <label for="name" id="ddd">name:</label>
+    <input type="text" id="name" required>
+  </fieldset>
 
-  <label for="age">age:</label>
-  <input type="" id="age">
+  <fieldset>
+    <legend>Age</legend>
+    <label for="age">age:</label>
+<!--    <div class="a">-->
+<!--      <div class="b"></div>-->
+      <input type="text" id="age" required>
+<!--    </div>-->
+  </fieldset>
 
   <div>
     <button type="submit">submit</button>
@@ -55,51 +69,16 @@
   </div>
 </form>
 
-<ul class="tree" id="tree">
-    <li>Животные
-        <ul>
-            <li>Млекопитающие
-                <ul>
-                    <li>Коровы</li>
-                    <li>Ослы</li>
-                    <li>Собаки</li>
-                    <li>Тигры</li>
-                </ul>
-            </li>
-            <li>Другие
-                <ul>
-                    <li>Змеи</li>
-                    <li>Птицы</li>
-                    <li>Ящерицы</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Рыбы
-        <ul>
-            <li>Аквариумные
-                <ul>
-                    <li>Гуппи</li>
-                    <li>Скалярии</li>
-                </ul>
-            </li>
-            <li>Морские
-                <ul>
-                    <li>Морская форель</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
 
 
-<!--<script src="style.js"></script>-->
+
+<script src="style.js"></script>
 <!--<script src="task_1.js"></script>-->
 <!--<script src="task_2.js"></script>-->
 <!--<script src="task_3.js"></script>-->
 <!--<script src="task_4.js"></script>-->
 <!--<script src="task_5.js"></script>-->
-<script src="modal.js"></script>
+<!--<script src="modal.js"></script>-->
 <!--<script src="task_6.js"></script>-->
 <!--<script src="form.js"></script>-->
 

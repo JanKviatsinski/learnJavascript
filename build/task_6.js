@@ -14,18 +14,23 @@
         ['A', 'wed', '5'],
     ];
 
-    const newObj = data.reduce((previousValue, item) =>{
-        if (!previousValue[item[1]]){
-            previousValue[item[1]]= {};
-            if(!previousValue[item[1]][item[0]]){
-                previousValue[item[1]][item[0]] = [ item[2],];
-            } else { previousValue[item[1]][item[0]].push(item[2]);}
-            return previousValue
-        } else if (!previousValue[item[1]][item[0]]){
-            previousValue[item[1]][item[0]] = [ item[2],];
-        } else { previousValue[item[1]][item[0]].push(item[2]);}
+    const newObj = data.reduce((previousValue, item) => {
+        const [className, day, time] = item;
+
+        if (!previousValue[day]){
+            previousValue[day]= {};
+            previousValue[day][className] = [time,];
+
+            return previousValue;
+        } else if (!previousValue[day][className]){
+            previousValue[day][className] = [ time,];
+        } else {
+            previousValue[day][className].push(time);
+        }
+
         return previousValue
     },{})
 
     console.log(newObj);
+
 }())

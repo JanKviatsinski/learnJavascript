@@ -6,6 +6,8 @@
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/task_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/task_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/task_6.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/task_6.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,9 @@
       <workItem from="1608961325760" duration="28752000" />
       <workItem from="1609134008700" duration="21200000" />
       <workItem from="1609221520180" duration="6841000" />
-      <workItem from="1609311752531" duration="15717000" />
+      <workItem from="1609311752531" duration="25320000" />
+      <workItem from="1609421448125" duration="18075000" />
+      <workItem from="1609565500391" duration="34489000" />
     </task>
     <task id="LOCAL-00001" summary="ddda">
       <created>1608296735719</created>
@@ -228,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609222759714</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="3 + new modal + 6">
+      <created>1609335292002</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1609335292002</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,13 +259,14 @@
     <MESSAGE value="task 6" />
     <MESSAGE value="task 3 + modal" />
     <MESSAGE value="3 + modal + 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 + modal + 6" />
+    <MESSAGE value="3 + new modal + 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 + new modal + 6" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1609222758026">
+    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1609335290038">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609222758026" />
+    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609335290038" />
     <state x="453" y="155" key="FileChooserDialogImpl" timestamp="1608748313659">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
@@ -263,10 +275,10 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="462" y="102" key="RollbackChangesDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608319522451" />
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1609222765940">
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1609335317138">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609222765940" />
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609335317138" />
     <state x="93" y="93" width="1158" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1608651041604">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
