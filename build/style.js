@@ -6,63 +6,56 @@ const age = form.age;
 
 function formValidation(){
 
-    return validateAge () && validateName ();
+    const result = validateAge () && validateName ();
+
+    if (result){
+        createTable ()
+    }
 
     function validateName (){
         let userNameLength = name.value.length;
 
     if (userNameLength >= 3 && userNameLength <= 30) {
-        return alert(555)
+        return true;
     } else {
-        createMessage(name, false);
+        createMessage(name);
         return false;
     }
     }
 
 function validateAge (){
-    let userAge= age.value;
+    let userAge = age.value;
 
     if(userAge >= 18 && userAge <= 99){
         return true;
     } else {
-        createMessage(age, false);
+        createMessage(age);
         return false;
     }
 }
+
+    function createTable ()  {
+        // const table = document.createElement('table');
+        // document.body.append(table);
+
+        const table = document.querySelector('table')
+        const tr = table.insertRow();
+        const tdName = tr.insertCell();
+        tdName.textContent = 'cccc';
+
+        const tdAde = tr.insertCell();
+        tdAde.textContent = 'gggg';
+
+        const tdButton = tr.insertCell();
+        tdButton.innerHTML = '<button>Удалить</button>';
+        tdButton.addEventListener('click', () => {
+            tr.remove();
+        })
+
+    }
+
+    return result;
 }
-
-
-function createTable ()  {
-    let table = document.createElement('table');
-    let tr = table.insertRow();
-    let td = tr.insertCell();
-    td.textContent = 'cccc';
-    tr.textContent = 'gggg';
-
-    // let td = document.createElement('td');
-    // let tr = document.createElement('tr');
-    // tr.appendChild(td);
-
-    // table.appendChild(td);
-    // table.appendChild(tr);
-    // document.body.appendChild(table);
-    table.style.backgroundColor = '#60a75b';
-    td.style.borderColor = '#060706'
-    tr.style.borderColor = '#060706'
-    td.style.border = 2 + 'px';
-    tr.style.border = 2 + 'px';
-    tr.style.width = 50 + 'px';
-    td.style.width = 50 + 'px';
-    tr.style.height = 50 + 'px';
-    td.style.height = 50 + 'px';
-    table.style.height = 100 + 'px';
-    table.style.width = 100 + 'px';
-    // td.textContent = 'cccc';
-    // tr.textContent = 'gggg';
-    document.body.append(table);
-}
-
-createTable ()
 
 age.addEventListener('keypress', function (event){
     let age = Number.isNaN(Number(event.target.value));
@@ -72,22 +65,24 @@ age.addEventListener('keypress', function (event){
 })
 
 function createMessage (input){
-    let parent = input.parentNode;
-    let messageWrap = document.createElement('div');
-    let message = document.createElement('p');
-    let label = parent.querySelector('label');
+    const parent = input.parentNode;
+    const label = parent.querySelector('label');
+    const left = label.offsetWidth;
+    const message = document.createElement('p');
+    message.textContent = `поле ${input.id} неверно`;
+    message.style.position = 'absolute';
+    message.style.left= left + 'px';
+    message.style.backgroundColor = '#529b23';
+    message.style.margin = '0';
+
+    const messageWrap = document.createElement('div');
+    messageWrap.style.position = 'relative';
     parent.prepend(messageWrap);
     messageWrap.append(label);
     messageWrap.append(message);
     messageWrap.append(input);
     messageWrap.append(input);
-    message.textContent = `поле ${input.id} неверно`;
-    messageWrap.style.position = 'relative';
-    message.style.position = 'absolute';
-    let left = label.offsetWidth;
-    message.style.left= left + 'px';
-    message.style.backgroundColor = '#60a75b';
-    message.style.margin = '0';
+
     input.onfocus = () => message.hidden = true;
 }
 

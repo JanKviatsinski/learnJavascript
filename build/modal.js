@@ -11,7 +11,7 @@ buttonShowModal.addEventListener('click', stopStartClock);
 const fragment = document.createDocumentFragment();
 fragment.prepend(buttonShowModal);
 fragment.append(divModal);
-document.body.prepend(fragment);
+document.body.append(fragment);
 
 const buttonHiddenModal = document.createElement('button');
 buttonHiddenModal.textContent = 'Срыть модальное окно';
@@ -54,6 +54,7 @@ divModal.onclick = function (event) {
     switch (event.target) {
         case buttonHiddenModal:
             // последовательно вызывай функции и выходи из switch
+            //тут я так и не сообразил как правильно написать
             stopStartClock();
             toggleHidden();
             break;
