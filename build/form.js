@@ -9,7 +9,9 @@ function formValidation(){
     const result = validateAge () && validateName ();
 
     if (result){
-        createTable ()
+        // localStorage.clear();
+        localStorage.setItem(`${name.value}`, `${age.value}`);
+        // createTable ();
     }
 
     function validateName (){
@@ -35,29 +37,27 @@ function formValidation(){
     }
 
     function createTable ()  {
-        // как динамически создать создать таблику чтоб она не пропадала?
-
-        // const table = document.createElement('table');
-        // document.body.append(table);
-
         const table = document.querySelector('table')
         const tr = table.insertRow();
         const tdName = tr.insertCell();
-        tdName.textContent = 'cccc';
+        tdName.textContent = name.value;
 
         const tdAde = tr.insertCell();
-        tdAde.textContent = 'gggg';
+        tdAde.textContent = age.value;
 
         const tdButton = tr.insertCell();
         tdButton.innerHTML = '<button>Удалить</button>';
         tdButton.addEventListener('click', () => {
             tr.remove();
-        })
+        });
 
+        event.preventDefault()
     }
 
     return result;
 }
+
+
 
 age.addEventListener('keypress', function (event){
     let age = Number.isNaN(Number(event.target.value));
@@ -83,7 +83,28 @@ function createMessage (input){
     messageWrap.append(label);
     messageWrap.append(message);
     messageWrap.append(input);
-    messageWrap.append(input);
 
     input.onfocus = () => message.hidden = true;
 }
+
+// localStorage.clear();
+
+const table = document.querySelector('table')
+
+let keys = Object.keys(localStorage)
+
+for (let x in keys){
+    const tr = table.insertRow();
+    const tdName = tr.insertCell();
+    tdName.textContent = `${keys[x]}`;
+
+    const tdAge = tr.insertCell();
+    tdAge.textContent = `${localStorage[keys[x]]}`;
+
+    const tdButton = tr.insertCell();
+    tdButton.innerHTML = '<button>Удалить</button>';
+    tdButton.addEventListener('click', () => {
+        tr.remove();
+    });
+}
+

@@ -11,7 +11,6 @@ buttonShowModal.addEventListener('click', stopStartClock);
 const fragment = document.createDocumentFragment();
 fragment.prepend(buttonShowModal);
 fragment.append(divModal);
-document.body.append(fragment);
 
 const buttonHiddenModal = document.createElement('button');
 buttonHiddenModal.textContent = 'Срыть модальное окно';
@@ -23,6 +22,8 @@ divModal.prepend(clock);
 const buttonStopStartClock = document.createElement('button');
 buttonStopStartClock.textContent = 'stop/start clock';
 divModal.append(buttonStopStartClock);
+
+document.body.append(fragment);
 
 let timerId;
 let isClockRunning;
