@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4270ca76-55fc-4f4a-a35a-67d9ebb96cd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/fetch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../courseProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,6 +39,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -46,11 +48,24 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Unnamed" type="js.build_tools.gulp" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>default</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
-      <tasks />
+      <tasks>
+        <task>default</task>
+      </tasks>
       <arguments />
       <envs />
       <method v="2" />
@@ -89,7 +104,9 @@
       <workItem from="1610518288750" duration="581000" />
       <workItem from="1610627035081" duration="65000" />
       <workItem from="1610627117974" duration="11194000" />
-      <workItem from="1610688781500" duration="21500000" />
+      <workItem from="1610688781500" duration="25153000" />
+      <workItem from="1610779997998" duration="15696000" />
+      <workItem from="1611152870407" duration="11767000" />
     </task>
     <task id="LOCAL-00001" summary="ddda">
       <created>1608296735719</created>
@@ -273,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610705469817</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="k">
+      <created>1610716760894</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1610716760894</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,26 +323,46 @@
     <option name="LAST_COMMIT_MESSAGE" value="k" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="127" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610627141634">
+    <state x="127" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611168149967">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="127" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1610627141634" />
-    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1610705468390">
+    <state x="127" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1611168149967" />
+    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1610716759562">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1610705468390" />
-    <state x="453" y="155" key="FileChooserDialogImpl" timestamp="1610693509913">
+    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1610716759562" />
+    <state x="453" y="155" key="FileChooserDialogImpl" timestamp="1610822385180">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="453" y="155" key="FileChooserDialogImpl/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1610693509913" />
+    <state x="453" y="155" key="FileChooserDialogImpl/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1610822385180" />
+    <state width="1323" height="203" key="GridCell.Tab.0.bottom" timestamp="1611153075828">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state width="1323" height="203" key="GridCell.Tab.0.bottom/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1611153075828" />
+    <state width="1323" height="203" key="GridCell.Tab.0.center" timestamp="1611153075828">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state width="1323" height="203" key="GridCell.Tab.0.center/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1611153075828" />
+    <state width="1323" height="203" key="GridCell.Tab.0.left" timestamp="1611153075828">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state width="1323" height="203" key="GridCell.Tab.0.left/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1611153075828" />
+    <state width="1323" height="203" key="GridCell.Tab.0.right" timestamp="1611153075828">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state width="1323" height="203" key="GridCell.Tab.0.right/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1611153075828" />
     <state x="462" y="102" key="RollbackChangesDialog" timestamp="1608319522451">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="462" y="102" key="RollbackChangesDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608319522451" />
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1610705489064">
+    <state x="181" y="45" key="SettingsEditor" timestamp="1611169999595">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1610705489064" />
+    <state x="181" y="45" key="SettingsEditor/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1611169999595" />
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1610716762897">
+      <screen x="0" y="0" width="1344" height="800" />
+    </state>
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1610716762897" />
     <state x="93" y="93" width="1158" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1608651041604">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
@@ -331,9 +375,9 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="329" y="181" width="672" height="677" key="run.anything.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1609859979417" />
-    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1608661656003">
+    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1611168790248">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1608661656003" />
+    <state x="335" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1611168790248" />
   </component>
 </project>
