@@ -3,10 +3,11 @@ async function compilingPostsData(){
     let usersPosts;
 
     const urls = [
-            'https://jsonplaceholder.typicode.com/users',
-            'https://jsonplaceholder.typicode.com/posts',
+        'https://jsonplaceholder.typicode.com/users',
+        'https://jsonplaceholder.typicode.com/posts',
     ];
 
+try {
     const requests = urls.map(url => fetch(url));
 
     const responses = await Promise.all(requests);
@@ -15,12 +16,12 @@ async function compilingPostsData(){
 
     const allNames = await responseNames.json();
 
-    usersPosts = allNames.reduce((obj, next) => {
-                obj[next.id] = [next.name];
-                return obj;
-                }, []);
-
     const allPosts = await responsePosts.json();
+
+    usersPosts = allNames.reduce((obj, next) => {
+        obj[next.id] = [next.name];
+        return obj;
+    }, []);
 
     for(let user of allPosts){
         if (usersPosts[user.id]) {
@@ -30,6 +31,10 @@ async function compilingPostsData(){
     }
 
     return usersPosts;
+} catch (e){
+    console.log(`ОШИБКА ${e}`);
+}
+
 }
 
 compilingPostsData().then(data => {
@@ -57,6 +62,6 @@ compilingPostsData().then(data => {
         },tBody)
 
     document.body.append(table);
-})
+}).catch(console.log);
 
 }())
