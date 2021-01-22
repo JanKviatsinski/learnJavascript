@@ -1,4 +1,4 @@
-(function (){
+(function () {
 
     const data = [
         ['A', 'mon', '10'],
@@ -16,20 +16,18 @@
 
     const newObj = data.reduce((previousValue, item) => {
         const [className, day, time] = item;
-
-        if (!previousValue[day]){
-            previousValue[day]= {};
+        if (!previousValue[day]) {
+            previousValue[day] = {};
             previousValue[day][className] = [time,];
-
             return previousValue;
-        } else if (!previousValue[day][className]){
-            previousValue[day][className] = [ time,];
+        } else if (!previousValue[day][className]) {
+            previousValue[day][className] = [time,];
         } else {
             previousValue[day][className].push(time);
         }
 
         return previousValue
-    },{})
+    }, {})
 
     console.log(newObj);
 

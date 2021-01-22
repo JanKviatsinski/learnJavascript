@@ -14,6 +14,7 @@
 <body>
 <style type="text/css">
   body {
+    width: 2000px;
       height: 2000px;
    background: #725b5b;
     display: flex;
@@ -48,7 +49,7 @@ table {
   <fieldset>
     <legend>Name</legend>
     <label for="name" id="ddd">name:</label>
-    <input type="text" id="name" required autocomplete = "off"><!--почему тут не работает off?-->
+    <input type="text" id="name" required autocomplete = "off">
   </fieldset>
 
   <fieldset>
@@ -100,7 +101,28 @@ table {
     </div>
   </fieldset>
 </template>
+<div class="wrap">
+<div data-tooltip-position="top" data-tooltip-text="top">
+  Top
+</div>
 
+<div data-tooltip-position="left" data-tooltip-text="left">
+  Left
+</div>
+
+<div data-tooltip-position="bottom" data-tooltip-text="bottom">
+  Bottom
+</div>
+
+<div data-tooltip-position="right" data-tooltip-text="right">
+  Right
+</div>
+</div>
+<template id="tooltip">
+  <div class="tooltip">
+    <!-- data-tooltip-text -->
+  </div>
+</template>
 
 <!--<script src="style.js"></script>-->
 <!--<script src="task_1.js"></script>-->
@@ -113,8 +135,7 @@ table {
 <!--<script src="form.js"></script>-->
 <!--<script src="template.js"></script>-->
 <script src="fetch.js"></script>
-
-
+<script src="task-metrics.js"></script>
 
 </body>
 

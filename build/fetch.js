@@ -39,6 +39,8 @@ try {
 
 compilingPostsData().then(data => {
     const table = document.createElement('table');
+    table.style.width = 600 +'px';
+
     const tHead = table.createTHead();
     const tHeadRow = tHead.insertRow()
     const tHeadName = tHeadRow.insertCell();

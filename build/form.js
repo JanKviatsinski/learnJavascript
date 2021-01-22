@@ -89,9 +89,9 @@ function createMessage (input){
 
 // localStorage.clear();
 
-const table = document.querySelector('table')
+const table = document.querySelector('table');
 
-let keys = Object.keys(localStorage)
+let keys = Object.keys(localStorage);
 
 for (let x in keys){
     const tr = table.insertRow();
