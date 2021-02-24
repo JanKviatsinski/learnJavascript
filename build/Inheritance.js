@@ -107,14 +107,57 @@ class IntBuilder extends Builder {
 
 const intBuilder = new IntBuilder(10);
 
-console.log(
-    intBuilder.plus(2)
-    .minus(2)
-    .multiply(2)
-    .divide(6)
-    .mod(5)
-    .get()
-);
+// console.log(
+//     intBuilder.plus(2)
+//     .minus(2)
+//     .multiply(2)
+//     .divide(6)
+//     .mod(5)
+//     .get()
+// );
+
+class StringBuilder extends Builder {
+    constructor(str) {
+        super(str);
+        this.str = str;
+    }
+
+    minus = (value) => {
+        return this.str.slice(0, this.str.length - value);
+    }
+
+    multiply = (value) => {
+        return this.str.repeat(value);
+    }
+
+    divide = (value) => {
+        const k = Math.floor(this.str.length / value);
+        return this.str.slice(0, this.str.length - k);
+    }
+
+    remove = (value) => {
+        return [...this.str].reduce((acc, current) => {
+            if (current !== value){
+                acc = acc + current;
+            }
+            return acc;
+        },'')
+    }
+
+    sub = (from, substringLength) => {
+        return this.str.substring(from, from + substringLength);
+    }
+}
+
+const strBuilder = new StringBuilder('Hello');
+console.log(strBuilder.plus(' ff'));
+console.log(strBuilder.minus( 2));
+console.log(strBuilder.multiply( 3));
+console.log(strBuilder.divide(6));
+console.log(strBuilder.remove('l'));
+console.log(strBuilder.sub(1, 3));
+
+
 
 
 
