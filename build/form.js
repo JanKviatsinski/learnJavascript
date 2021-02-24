@@ -51,7 +51,7 @@ function formValidation(){
             tr.remove();
         });
 
-        event.preventDefault()
+        /*event.preventDefault()*/
     }
 
     return result;

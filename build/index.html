@@ -43,6 +43,40 @@ table, th, td  {
 table {
   margin-bottom: 30px;
 }
+
+.parent{
+  width: 600px;
+  background: #529b23;
+  padding: 10px;
+  margin: 0;
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  grid-gap: 1.2em;
+  margin-bottom: 30px;
+}
+.child{
+  background: aquamarine;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*margin-right: -10px;*/
+  /*margin-bottom: -10px;*/
+
+/*  margin: 0;*/
+/*  display: grid;*/
+/*  grid-auto-flow: dense;*/
+/*!*grid-template-columns: repeat(auto-fit, minmax(auto, 1fr)) ;*!*/
+/*  grid-gap: 5px;*/
+
+}
+.paragraph{
+  margin: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: antiquewhite;
+
+}
+
 </style>
 
 <form name="form" onSubmit="return formValidation(); ">
@@ -120,9 +154,50 @@ table {
 </div>
 <template id="tooltip">
   <div class="tooltip">
-    <!-- data-tooltip-text -->
+    dcdc
   </div>
 </template>
+
+<div class="parent">
+
+  <div class="child">
+    <p class="paragraph">sdsdc wwwwwww wwwwww</p>
+    <p class="paragraph">aaxxccwwwwww wwww</p>
+    <p class="paragraph">ascccc ccccc</p>
+    <p class="paragraph">axcxc</p>
+  </div>
+
+  <div class="child">
+    <p class="paragraph">sdsdc</p>
+    <p class="paragraph">aaxxcc</p>
+    <p class="paragraph">ascccc ccccc</p>
+    <p class="paragraph">axcxc</p>
+  </div>
+
+  <div class="child">
+    <p class="paragraph">sdsdc</p>
+    <p class="paragraph">aaxxcc</p>
+    <p class="paragraph">ascccc ccccc</p>
+    <p class="paragraph">axcxc</p>
+  </div>
+
+  <div class="child">
+    <p class="paragraph">sdsdc</p>
+    <p class="paragraph">aaxxcc</p>
+    <p class="paragraph">ascccc ccccc</p>
+    <p class="paragraph">axcxc</p>
+  </div>
+
+  <div class="child">
+    <p class="paragraph">sdsdc</p>
+    <p class="paragraph">aaxxcc</p>
+    <p class="paragraph">ascccc ccccc</p>
+    <p class="paragraph">axcxc</p>
+  </div>
+
+
+
+</div>
 
 <!--<script src="style.js"></script>-->
 <!--<script src="task_1.js"></script>-->
@@ -134,8 +209,9 @@ table {
 <!--<script src="task_6.js"></script>-->
 <!--<script src="form.js"></script>-->
 <!--<script src="template.js"></script>-->
-<script src="fetch.js"></script>
-<script src="task-metrics.js"></script>
+<!--<script src="fetch.js"></script>-->
+<!--<script src="task-metrics.js"></script>-->
+<script src="Inheritance.js"></script>
 
 </body>
 
