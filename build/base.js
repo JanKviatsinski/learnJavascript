@@ -28,22 +28,49 @@ class DoubleLinkedList {
             return
         }
 
-        function (prev = null)
         let currentNode = this.head
-        // while (currentNode.next) {
-        //     currentNode.previous = currentNode
-        //     currentNode = currentNode.next
-        // }
+        while (currentNode.next) {
+            currentNode = currentNode.next
+        }
 
         currentNode.next = node
+        node.previous = currentNode
         this.tailNode = node
     }
 }
 
 const dll = new DoubleLinkedList()
 
-dll.add('ccc')
-dll.add('bbb')
-dll.add('vvv')
+dll.add('1')
+dll.add('2')
+dll.add('3')
 
 console.log(dll);
+
+
+
+
+
+
+
+/*else {
+            x.apply(this, [this.head, null])
+
+
+        function x (currentNode, prev = null){
+
+            if (currentNode !== this.head){
+                currentNode.previous = prev
+            }
+
+            if (currentNode.next) {
+                prev = currentNode
+                x.apply(this, [currentNode.next, prev])
+            } else {
+                // currentNode.previous = prev
+                currentNode.next = node
+                node.previous = currentNode
+                this.tailNode = node
+            }
+
+        }}*/
