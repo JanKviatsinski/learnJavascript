@@ -22,7 +22,7 @@ class DoubleLinkedList {
     }
 
     traverse(order = true) {
-        if(!this.head){
+        if (!this.head) {
             return
         }
 
@@ -72,7 +72,7 @@ class DoubleLinkedList {
     }
 
     getNode(value) {
-        if(!this.head){
+        if (!this.head) {
             return
         }
 
@@ -90,7 +90,7 @@ class DoubleLinkedList {
     }
 
     addAfter(value, parentNode) {
-        if(!this.head){
+        if (!this.head) {
             return
         }
 
@@ -113,7 +113,7 @@ class DoubleLinkedList {
     delete(value) {
         const removableNode = this.getNode(value)
 
-        if(!removableNode){
+        if (!removableNode) {
             return this
         }
 
