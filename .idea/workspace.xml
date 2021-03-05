@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4270ca76-55fc-4f4a-a35a-67d9ebb96cd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/base2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/base2.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/base2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +136,7 @@
       <workItem from="1614665259994" duration="2509000" />
       <workItem from="1614710183567" duration="190000" />
       <workItem from="1614870616536" duration="8049000" />
-      <workItem from="1614923676593" duration="20224000" />
+      <workItem from="1614923676593" duration="25095000" />
     </task>
     <task id="LOCAL-00001" summary="ddda">
       <created>1608296735719</created>
@@ -413,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614947483605</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="8">
+      <created>1614957740251</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1614957740251</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,17 +449,18 @@
     <MESSAGE value="5" />
     <MESSAGE value="6" />
     <MESSAGE value="7" />
-    <option name="LAST_COMMIT_MESSAGE" value="7" />
+    <MESSAGE value="8" />
+    <option name="LAST_COMMIT_MESSAGE" value="8" />
   </component>
   <component name="WindowStateProjectService">
     <state x="127" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614710349259">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="127" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1614710349259" />
-    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1614947482606">
+    <state x="297" y="0" key="CommitChangelistDialog2" timestamp="1614957739188">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1614947482606" />
+    <state x="297" y="0" key="CommitChangelistDialog2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1614957739188" />
     <state x="453" y="155" key="FileChooserDialogImpl" timestamp="1614700037247">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
@@ -535,10 +541,10 @@
       <screen x="0" y="0" width="1344" height="800" />
     </state>
     <state x="394" y="142" width="540" height="524" key="StructurePopup/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1614260129358" />
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1614947489671">
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2" timestamp="1614957742099">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
-    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1614947489671" />
+    <state x="265" y="133" key="Vcs.Push.Dialog.v2/0.0.1344.800/160.-768.1093.574@0.0.1344.800" timestamp="1614957742099" />
     <state x="93" y="93" width="1158" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1608651041604">
       <screen x="0" y="0" width="1344" height="800" />
     </state>
