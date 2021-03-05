@@ -22,8 +22,12 @@ class DoubleLinkedList {
     }
 
     traverse(order = true) {
+        if(!this.head){
+            return
+        }
+
         const values = []
-// const start = [new Date().getSeconds(), new Date().getMilliseconds()]
+
         if (order) {
             let currentNode = this.head
 
@@ -44,18 +48,6 @@ class DoubleLinkedList {
             }
         }
 
-        // if (order) {
-        //         let currentNode = this.head
-        //
-        //         values.push(currentNode.data)
-        //
-        //         while (currentNode.next) {
-        //             values.push(currentNode.next.data)
-        //             currentNode = currentNode.next
-        //         }}
-        //
-        // const end = [new Date().getSeconds(), new Date().getMilliseconds()]
-// console.log(start, end)
         return values
     }
 
@@ -64,7 +56,7 @@ class DoubleLinkedList {
 
         if (!this.head) {
             this.head = node
-            return
+            return this
         }
 
         let currentNode = this.head
@@ -75,9 +67,15 @@ class DoubleLinkedList {
         currentNode.next = node
         node.previous = currentNode
         this.tailNode = node
+
+        return this
     }
 
     getNode(value) {
+        if(!this.head){
+            return
+        }
+
         let currentNode = this.head
 
         while (currentNode.next) {
@@ -87,10 +85,15 @@ class DoubleLinkedList {
                 currentNode = currentNode.next
             }
         }
+
         return currentNode.data === value ? currentNode : null
     }
 
     addAfter(value, parentNode) {
+        if(!this.head){
+            return
+        }
+
         const node = new Node(value)
 
         node.next = parentNode.next
@@ -102,13 +105,17 @@ class DoubleLinkedList {
 
         parentNode.next = node
 
-        if (node.next === null/*убрать нулл*/) {
+        if (!node.next) {
             this.tailNode = node
         }
     }
 
     delete(value) {
         const removableNode = this.getNode(value)
+
+        if(!removableNode){
+            return this
+        }
 
         if (removableNode.previous) {
             removableNode.previous.next = removableNode.next
@@ -121,6 +128,8 @@ class DoubleLinkedList {
         } else {
             this.tailNode = removableNode.previous
         }
+
+        return this
     }
 
     isExist(value) {
@@ -129,13 +138,23 @@ class DoubleLinkedList {
 }
 
 const dll = new DoubleLinkedList()
+dll.add('two').add('one').add('three').add('four')
+console.log(dll.traverse()) // two -> one -> three -> four
+console.log(dll.traverse(true)) // two -> one -> three -> four
+console.log(dll.traverse(false)) // four -> three -> one -> two
 
-dll.add(1)
-dll.add(2)
-dll.add(3)
-dll.delete(3)
-console.log(dll.isExist(3));
+console.log(dll.hea()) // Node with value === 'two'
+console.log(dll.tail()) // Node with value === 'four'
 
+const parentNode = dll.getNode('one')
+dll.addAfter('ten', parentNode);
+console.log(dll.traverse()) // two -> one -> ten -> three -> four
+
+dll.delete('one').delete('three');
+console.log(dll.traverse()) // two -> ten -> four
+
+console.log(dll.isExist('ten')) // true
+console.log(dll.isExist('one')) // false
 
 /*else {
             x.apply(this, [this.head, null])
@@ -158,3 +177,13 @@ console.log(dll.isExist(3));
             }
 
         }}*/
+
+// if (order) {
+//         let currentNode = this.head
+//
+//         values.push(currentNode.data)
+//
+//         while (currentNode.next) {
+//             values.push(currentNode.next.data)
+//             currentNode = currentNode.next
+//         }}
