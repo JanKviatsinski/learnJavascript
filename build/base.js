@@ -77,17 +77,17 @@ class DoubleLinkedList {
         this.tailNode = node
     }
 
-    getNode(value){
+    getNode(value) {
         let currentNode = this.head
 
         while (currentNode.next) {
-            if(currentNode.data === value){
+            if (currentNode.data === value) {
                 break
-            }else {
+            } else {
                 currentNode = currentNode.next
             }
         }
-        return currentNode.data === value ? currentNode : 'Not found.'
+        return currentNode.data === value ? currentNode : null
     }
 
     addAfter(value, parentNode) {
@@ -96,13 +96,13 @@ class DoubleLinkedList {
         node.next = parentNode.next
         node.previous = parentNode
 
-        if (parentNode.next){
+        if (parentNode.next) {
             parentNode.next.previous = node
         }
 
         parentNode.next = node
 
-        if (node.next === null){
+        if (node.next === null/*убрать нулл*/) {
             this.tailNode = node
         }
     }
@@ -110,17 +110,21 @@ class DoubleLinkedList {
     delete(value) {
         const removableNode = this.getNode(value)
 
-        if (removableNode.previous){
+        if (removableNode.previous) {
             removableNode.previous.next = removableNode.next
         } else {
             this.head = removableNode.next
         }
 
-        if(removableNode.next){
+        if (removableNode.next) {
             removableNode.next.previous = removableNode.previous
-        }else {
+        } else {
             this.tailNode = removableNode.previous
         }
+    }
+
+    isExist(value) {
+        return Boolean(this.getNode(value))
     }
 }
 
@@ -129,9 +133,8 @@ const dll = new DoubleLinkedList()
 dll.add(1)
 dll.add(2)
 dll.add(3)
-dll.delete(2)
-console.log(dll);
-
+dll.delete(3)
+console.log(dll.isExist(3));
 
 
 /*else {
