@@ -2,6 +2,7 @@
 
     class Node {
         constructor(key, value) {
+            this.parentNode = null
             this.key = key
             this.value = value
             this.left = null
@@ -12,79 +13,183 @@
     class BinarySearchTree {
         constructor() {
             this.root = null
+            this.values = {}
         }
 
         roo() {
             return this.root
         }
 
-        insert(insertKey, insertValue) {
+        insert(key, value) {
+            const newNode = new Node(key, value)
+
             if (!this.root) {
-                this.root = new Node(insertKey, insertValue)
+                this.root = newNode
+                this.values[newNode.value] = newNode.key
                 return
             }
 
-            let foundNode = null
+            let currentNode = this.root
 
-            const parentNode = chooseNode(this.root)
-
-            if (insertKey < parentNode.key) {
-                parentNode.left = new Node(insertKey, insertValue)
-            } else {
-                parentNode.right = new Node(insertKey, insertValue)
-            }
-
-            function chooseNode(node) {
-
-                if (node.key < insertKey) {
-                    searchRight(node)
+            while (currentNode) {
+                if (key > currentNode.key) {
+                    if (currentNode.right) {
+                        currentNode = currentNode.right
+                    } else {
+                        currentNode.right = newNode
+                        newNode.parentNode = currentNode
+                        this.values[newNode.value] = newNode.key
+                        break
+                    }
                 } else {
-                    searchLeft(node)
-                }
-
-                return foundNode
-            }
-
-
-            function searchRight(currentNode) {
-
-                if (currentNode.right) {
-                    chooseNode(currentNode.right)
-                } else {
-                    foundNode = currentNode/*.right = new Node(insertKey, insertValue)*/
+                    if (currentNode.left) {
+                        currentNode = currentNode.left
+                    } else {
+                        currentNode.left = newNode
+                        newNode.parentNode = currentNode
+                        this.values[newNode.value] = newNode.key
+                        break
+                    }
                 }
             }
-
-            function searchLeft(currentNode) {
-                if (currentNode.left) {
-                    chooseNode(currentNode.left)
-                } else {
-                    foundNode = currentNode/*.left = new Node(insertKey, insertValue)*/
-                }
-            }
+            return this
         }
 
         delete(key) {
+            const removableNode = this.search(key)
+            const right = removableNode.right
+            const left = removableNode.left
+
+            if (removableNode !== this.root) {
+                if (removableNode.parentNode.left === removableNode) {
+                    removableNode.parentNode.left = null
+                } else {
+                    removableNode.parentNode.right = null
+                }
+            } else {
+                if (right > left) {
+                    this.root = left
+                    this.insert(right.key, right.value)
+
+                } else {
+                    this.root = right
+                    this.insert(left.key, left.value)
+                }
+                return
+            }
+
+            if (right) {
+                this.insert(right.key, right.value)
+            }
+
+            if (left) {
+                this.insert(left.key, left.value)
+            }
         }
 
         search(key) {
+            let currentNode = this.root
+            while (currentNode) {
+                if (currentNode.key === key) {
+                    break
+                }
 
+                if (key > currentNode.key) {
+                    currentNode = currentNode.right
+                } else {
+                    currentNode = currentNode.left
+                }
+            }
+            return currentNode
+        }
+
+        contains(value) {
+            return Boolean(this.values[value])
+        }
+
+        traverse(order = true) {
+            const allKeys = []
+
+            if (this.root) {
+                allKeys.push(this.root.key)
+            }
+
+            let currentNode = this.root/*.right*/
+
+            while (currentNode) {
+                if (!currentNode.right) {
+                    break
+                }
+
+                if (currentNode.key < currentNode.right.key) {
+                    allKeys.push(currentNode.right.key)
+                    allKeys.push(currentNode.left.key)
+                    currentNode = currentNode.right
+                }
+            }
+
+            currentNode = this.root
+
+            while (currentNode) {
+                if (!currentNode.left) {
+                    break
+                }
+
+                if (currentNode.key > currentNode.left.key) {
+                    allKeys.unshift(currentNode.left.key)
+                    allKeys.unshift(currentNode.right.key)
+                    currentNode = currentNode.left
+                }
+            }
+
+            return allKeys
         }
     }
 
     const bst = new BinarySearchTree()
 
-    // bst.insert(2, 'two').insert(1, 'one').insert(3, 'three');
-
-    bst.insert(4, 'one')
-    bst.insert(3, 'one')
-    bst.insert(1, 'one')
-    bst.insert(5, 'one')
-    bst.insert(8, 'one')
-    bst.insert(7, 'one')
-    bst.insert(10, 'one')
-
+    bst.insert(2, 333)
+    bst.insert(0, 'w')
+    bst.insert(5, 'e')
+    bst.insert(4, 'g')
+    bst.insert(1, 'f')
+    bst.insert(6, 'n')
+    // bst.insert(3, 'one')
+    // bst.insert(8, 'one')
+    // bst.delete(2)
+    // console.log(bst.search(5));
     console.log(bst.roo());
+    console.log(bst.traverse());
+
+
+//     bst.insert(2, 'two')
+//     bst.insert(1, 'one')
+//     bst.insert(3, 'three');
+//
+// //---2----
+// //1-----3-
+// //--------
+//
+//     console.log(bst.roo()); // 'two'
+//
+//     bst.delete(1)
+//     bst.delete(3);
+//
+//     //---2----
+// //---------
+// //----------
+//
+//     console.log(bst.roo()); // 'two'
+//
+//     bst.insert(1, 'one');
+//     bst.insert(3, 'three');
+//
+// //---2----
+// //1-----3-
+// //--------
+//
+//     console.log(bst.search(1)); // 'one'
+//     console.log(bst.contains('three'));// true
 
 
     // insert(key, value) {
@@ -92,6 +197,7 @@
     //         this.root = new Node(key, value)
     //         return
     //     }
+    //     const newNode = new Node(key, value)
     //
     //     chooseDirection(this.root)
     //
@@ -107,7 +213,8 @@
     //         if (currentNode.right) {
     //             chooseDirection(currentNode.right)
     //         } else {
-    //             currentNode.right = new Node(key, value)
+    //             currentNode.right = newNode
+    //             newNode.parentNode = currentNode
     //         }
     //     }
     //
@@ -115,7 +222,8 @@
     //         if (currentNode.left) {
     //             chooseDirection(currentNode.left)
     //         } else {
-    //             currentNode.left = new Node(key, value)
+    //             currentNode.left = newNode
+    //             newNode.parentNode = currentNode
     //         }
     //     }
     //     return this
