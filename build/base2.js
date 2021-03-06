@@ -110,38 +110,23 @@
         traverse(order = true) {
             const allKeys = []
 
-            if (this.root) {
-                allKeys.push(this.root.key)
-            }
+            inOrder(this.root)
 
-            let currentNode = this.root/*.right*/
-
-            while (currentNode) {
-                if (!currentNode.right) {
-                    break
+            function inOrder(node){
+                if (node == null) {
+                    return
                 }
 
-                if (currentNode.key < currentNode.right.key) {
-                    allKeys.push(currentNode.right.key)
-                    allKeys.push(currentNode.left.key)
-                    currentNode = currentNode.right
-                }
-            }
-
-            currentNode = this.root
-
-            while (currentNode) {
-                if (!currentNode.left) {
-                    break
-                }
-
-                if (currentNode.key > currentNode.left.key) {
-                    allKeys.unshift(currentNode.left.key)
-                    allKeys.unshift(currentNode.right.key)
-                    currentNode = currentNode.left
+                if (order){
+                    inOrder(node.left)
+                    allKeys.push(node.key)
+                    inOrder(node.right)
+                }else {
+                    inOrder(node.right)
+                    allKeys.push(node.key)
+                    inOrder(node.left)
                 }
             }
-
             return allKeys
         }
     }
@@ -159,7 +144,7 @@
     // bst.delete(2)
     // console.log(bst.search(5));
     console.log(bst.roo());
-    console.log(bst.traverse());
+    console.log(bst.traverse(false));
 
 
 //     bst.insert(2, 'two')
