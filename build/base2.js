@@ -26,7 +26,7 @@
             if (!this.root) {
                 this.root = newNode
                 this.values[newNode.value] = newNode.key
-                return
+                return this
             }
 
             let currentNode = this.root
@@ -57,6 +57,13 @@
 
         delete(key) {
             const removableNode = this.search(key)
+
+            if (!removableNode) {
+                return this
+            }
+
+            delete this.values[removableNode.value]
+
             const right = removableNode.right
             const left = removableNode.left
 
@@ -85,6 +92,8 @@
             if (left) {
                 this.insert(left.key, left.value)
             }
+
+            return this
         }
 
         search(key) {
@@ -112,106 +121,90 @@
 
             inOrder(this.root)
 
-            function inOrder(node){
+            function inOrder(node) {
                 if (node == null) {
                     return
                 }
 
-                if (order){
+                if (order) {
                     inOrder(node.left)
                     allKeys.push(node.key)
                     inOrder(node.right)
-                }else {
+                } else {
                     inOrder(node.right)
                     allKeys.push(node.key)
                     inOrder(node.left)
                 }
             }
+
             return allKeys
+        }
+
+        verify() {
+            const allKeys = this.traverse()
+            let treeIsValid
+
+            if (allKeys.length < 2) {
+                return
+            }
+
+            for (let i = 0; i < allKeys.length; i++) {
+
+                if (allKeys[i] > allKeys[i + 1]) {
+                    treeIsValid = false
+                    break
+                }
+
+                treeIsValid = true
+            }
+
+            return treeIsValid
         }
     }
 
     const bst = new BinarySearchTree()
 
-    bst.insert(2, 333)
-    bst.insert(0, 'w')
-    bst.insert(5, 'e')
-    bst.insert(4, 'g')
-    bst.insert(1, 'f')
-    bst.insert(6, 'n')
-    // bst.insert(3, 'one')
-    // bst.insert(8, 'one')
-    // bst.delete(2)
-    // console.log(bst.search(5));
-    console.log(bst.roo());
-    console.log(bst.traverse(false));
+    bst.insert(2, 'two').insert(1, 'one').insert(3, 'three');
+
+//---2----
+//1-----3-
+//--------
+
+    console.log(bst.roo()); // 'two'
+
+    bst.delete(1).delete(3);
+
+    //---2----
+//---------
+//----------
+
+    console.log(bst.roo()); // 'two'
+
+    bst.insert(1, 'one');
+    bst.insert(3, 'three');
+
+//---2----
+//1-----3-
+//--------
+
+    console.log(bst.search(1)); // 'one'
+    console.log(bst.contains('three'));// true
+
+    console.log(bst.traverse(true)); // ['one', 'two', 'three']
+    console.log(bst.traverse(false)); // ['three', 'two', 'one']
+
+    bst.root.key = 0;
+    console.log(bst.verify()); //false
 
 
-//     bst.insert(2, 'two')
-//     bst.insert(1, 'one')
-//     bst.insert(3, 'three');
-//
-// //---2----
-// //1-----3-
-// //--------
-//
-//     console.log(bst.roo()); // 'two'
-//
-//     bst.delete(1)
-//     bst.delete(3);
-//
-//     //---2----
-// //---------
-// //----------
-//
-//     console.log(bst.roo()); // 'two'
-//
-//     bst.insert(1, 'one');
-//     bst.insert(3, 'three');
-//
-// //---2----
-// //1-----3-
-// //--------
-//
-//     console.log(bst.search(1)); // 'one'
-//     console.log(bst.contains('three'));// true
-
-
-    // insert(key, value) {
-    //     if (!this.root) {
-    //         this.root = new Node(key, value)
-    //         return
-    //     }
-    //     const newNode = new Node(key, value)
-    //
-    //     chooseDirection(this.root)
-    //
-    //     function chooseDirection(node) {
-    //         if (node.key < key) {
-    //             goRight(node)
-    //         } else {
-    //             goLeft(node)
-    //         }
-    //     }
-    //
-    //     function goRight(currentNode) {
-    //         if (currentNode.right) {
-    //             chooseDirection(currentNode.right)
-    //         } else {
-    //             currentNode.right = newNode
-    //             newNode.parentNode = currentNode
-    //         }
-    //     }
-    //
-    //     function goLeft(currentNode) {
-    //         if (currentNode.left) {
-    //             chooseDirection(currentNode.left)
-    //         } else {
-    //             currentNode.left = newNode
-    //             newNode.parentNode = currentNode
-    //         }
-    //     }
-    //     return this
-    // }
+    // bst.insert(2, 333)
+    // bst.insert(0, 'w')
+    // bst.insert(5, 'e')
+    // bst.insert(4, 'g')
+    // bst.insert(1, 'f')
+    // bst.insert(6, 'n')
+    // // bst.delete(6)
+    // // console.log(bst.values)
+    // console.log(bst.verify());
 
 }())
